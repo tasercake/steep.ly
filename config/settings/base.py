@@ -31,7 +31,7 @@ LANGUAGE_CODE = "en-us"
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-i18n
-USE_I18N = True
+USE_I18N = False
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-l10n
 USE_L10N = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
@@ -47,7 +47,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(ROOT_DIR, 'db.sqlite3'),
     },
-    "postgres": env.db("DATABASE_URL", default="postgres://localhost/steeply")
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
@@ -80,6 +79,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "steeply.users.apps.UsersConfig",
+    "api",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

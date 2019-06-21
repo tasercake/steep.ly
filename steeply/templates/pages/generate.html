@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="POST" class="terrain-form">{% csrf_token %}
+        {{ form.as_p }}
+        <label for="scaleSlider">Scale</label>
+        <input type="range" class="custom-range" id="scaleSlider" min=1 max=100/>
+        <button type="submit" class="save btn btn-primary">Gimme Terrain</button>
+    </form>
+{% endblock %}
+
+{% block javascript %}
+{% endblock javascript %}
