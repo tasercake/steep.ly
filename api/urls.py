@@ -8,6 +8,6 @@ app_name = 'api'
 
 urlpatterns = [
     # path("", include(router.urls)),
-    path("", views.GenerateTerrain.as_view(), name='generate_terrain'),
-    path("<int:pk>/", views.GetTerrain.as_view(), name='get_terrain'),
+    path("terrain/", views.GenerateTerrain.as_view(), name='generate_terrain'),
+    path("terrain/<key>/", views.GetTerrain.as_view(), name='get_terrain'),
 ]
