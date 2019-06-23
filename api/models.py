@@ -9,3 +9,4 @@ def get_unique_slug():
 class Terrain(models.Model):
     slug = models.CharField(max_length=8, unique=True, null=False, default=get_unique_slug)
     height = models.ImageField(null=False)
+    options = models.FileField(null=True)

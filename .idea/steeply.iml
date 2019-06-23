@@ -21,6 +21,7 @@
     <option name="requirementsPath" value="$MODULE_DIR$/requirements/local.txt" />
   </component>
   <component name="PyDocumentationSettings">
+    <option name="myDocStringFormat" value="Google" />
     <option name="renderExternalDocumentation" value="true" />
   </component>
   <component name="ReSTService">
@@ -36,7 +37,7 @@
     </option>
   </component>
   <component name="TestRunnerService">
-    <option name="projectConfiguration" value="py.test" />
-    <option name="PROJECT_TEST_RUNNER" value="py.test" />
+    <option name="projectConfiguration" value="pytest" />
+    <option name="PROJECT_TEST_RUNNER" value="pytest" />
   </component>
 </module>
