@@ -7,4 +7,6 @@ psycopg2==2.8.2 --no-binary psycopg2  # https://github.com/psycopg/psycopg2
 
 # Django
 # ------------------------------------------------------------------------------
+boto3
 django-anymail[mailgun]==6.0.1  # https://github.com/anymail/django-anymail
+django-storages
