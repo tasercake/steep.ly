@@ -39,7 +39,7 @@ class SimpleTerrainRequestSerializer(serializers.Serializer):
             blob = BytesIO()
             image.save(blob, 'JPEG', quality=50)
             field.save(f'{terrain.slug}/{terrain.slug}_{field_name}.jpg', ContentFile(blob.getvalue()), save=False)
-        options = StringIO(json.dumps(generator.options))
+        options = BytesIO(json.dumps(generator.options).encode('utf8'))
         terrain.options.save(f'{terrain.slug}/{terrain.slug}_options.json', ContentFile(options.getvalue()), save=False)
         terrain.save()
         return terrain
