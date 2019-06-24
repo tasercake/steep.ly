@@ -83,7 +83,6 @@ class TerrainGenerator:
         amplitudes = amplitudes or [persistence ** i for i in range(depth)]
         assert len(amplitudes) == len(frequencies)
         for freq, amp in zip(frequencies, amplitudes):
-            print(scale, freq * scale)
             noise += amp * self._perlin(size, (freq * scale))
         return self.normalize(noise)
 

@@ -21,7 +21,7 @@ class SimpleTerrainRequestSerializer(serializers.Serializer):
     preview_size = serializers.IntegerField(default=512)
     size = serializers.IntegerField(default=2048)
     seed = serializers.IntegerField(default=0)
-    scale = serializers.FloatField(default=1)
+    scale = serializers.IntegerField(default=1)
     depth = serializers.IntegerField(default=4)
 
     def validate(self, options):
